@@ -60,7 +60,7 @@ a {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f3f4f6;
-    font-size: 0.90rem;
+    font-size: .875rem;
     color: #58588a;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -87,7 +87,6 @@ body {
 
 .navigation_bar {
     font-family: 'Poppins Medium', sans-serif;
-    font-size: 0.90rem;
     padding: var(--main-side-padding);
     height: 3.5rem;
 
