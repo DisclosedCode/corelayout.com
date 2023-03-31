@@ -172,7 +172,6 @@ body {
 .navigation_extras {
     display: flex;
     align-items: center;
-    column-gap: 1rem;
     color: #69699b;
     z-index: 110;
     order: 1;
@@ -185,6 +184,10 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+
+    .navigation_extras {
+        column-gap: 1rem;
+    }
 
     #navigation_toggle:checked ~ .navigation_extras label,
     #navigation_toggle:not(:checked) ~ .navigation_extras label {
