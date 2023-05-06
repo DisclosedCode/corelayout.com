@@ -12,12 +12,11 @@ jobs:
 
       - name: Copy repository contents via scp
         uses: appleboy/scp-action@master
-        env:
+        with:
           HOST: ${{ secrets.SSH_C_HOST }}
           USERNAME: ${{ secrets.SSH_C_USERNAME }}
           PORT: ${{ secrets.SSH_C_PORT }}
           KEY: ${{ secrets.SSH_C_KEY }}
-        with:
           source: "."
           target: "/usr/share/nginx/html/corelayout.com"
 
