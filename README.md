@@ -17,3 +17,11 @@ As a full-stack developer, I frequently work with a wide range of layouts and al
 To tackle this challenge, I decided to create my own personal collection of the most used layouts using pure CSS and take advantage of modern CSS features such as flexbox and grid.
 
 Adopting this approach not only streamlined my development process, but also ensured a lightweight, maintainable, and efficient code base.
+
+### Layouts
+
+- Navigation bars [`navbars`](https://github.com/DisclosedCode/corelayout.com/tree/main/navbars)
+- Footers [`footers`](https://github.com/DisclosedCode/corelayout.com/tree/main/footers)
+- . . .
+
+Stay in the loop and **star**/**watch** the repository for the upcoming layouts and components.

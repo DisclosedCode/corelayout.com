@@ -1,0 +1,159 @@
+/* Importing static fonts */
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+/* END */
+
+/* Minimal CSS reset for browser compatibility */
+
+body {
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul[class], ol[class] {
+    list-style: none;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* END */
+
+/* Declaring global custom CSS properties */
+
+:root {
+
+    --main-width: 1280px;
+    --main-side-margin: 1rem;
+    --main-side-padding: 1rem;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6;
+    font-size: 0.90rem;
+    color: #58588a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main_container {
+    width: 100%;
+    max-width: var(--main-width);
+    padding: 0 var(--main-side-padding);
+    margin: 0 auto;
+    background-color: white;
+}
+
+
+/* Footer */
+
+.footer_container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: var(--main-side-padding);
+    align-items: center;
+    color: #69699b;
+}
+
+.footer_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e2eb;
+}
+
+.footer_list {
+    display: flex;
+    font-size: 0.8rem;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1rem;
+    padding: 0;
+}
+
+.footer_separator {
+    background-color: #e2e2eb;
+    width: 1px;
+    height: 15px;
+}
+
+.footer_link {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    color: #69699b;
+}
+
+.footer_link:hover {
+    color: #454573;
+}
+
+.footer_socials {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer_link svg {
+    fill: #b5b6ce;
+}
+
+.footer_link svg:hover {
+    fill: #84859c;
+}
+
+.footer_socials .footer_link:hover {
+    fill: #84859c;
+}
+
+.footer_copyright {
+    color: #69699b;
+}
+
+@media screen and (max-width: 900px) {
+
+    .footer_bar {
+        flex-direction: column;
+        row-gap: 1.5rem;
+        align-items: center;
+    }
+
+    .footer_socials {
+        order: -1;
+    }
+}
