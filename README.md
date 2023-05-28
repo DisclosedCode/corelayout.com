@@ -20,8 +20,8 @@ Adopting this approach not only streamlined my development process, but also ens
 
 ### Layouts
 
-- Navigation bars [`navbars`](https://github.com/DisclosedCode/corelayout.com/tree/main/navbars)
-- Footers [`footers`](https://github.com/DisclosedCode/corelayout.com/tree/main/footers)
+- Navigation bars [(navbars)](https://github.com/DisclosedCode/corelayout.com/tree/main/navbars)
+- Footers [(footers)](https://github.com/DisclosedCode/corelayout.com/tree/main/footers)
 - . . .
 
 Stay in the loop and **star**/**watch** the repository for the upcoming layouts and components.
