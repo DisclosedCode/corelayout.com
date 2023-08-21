@@ -22,6 +22,6 @@ Adopting this approach not only streamlined my development process, but also ens
 
 - Navigation bars [(navbars)](https://github.com/DisclosedCode/corelayout.com/tree/main/navbars)
 - Footers [(footers)](https://github.com/DisclosedCode/corelayout.com/tree/main/footers)
-- . . .
+- Flyout menus [(flyout-menus)](https://github.com/DisclosedCode/corelayout.com/tree/main/flyout-menus)
 
 Stay in the loop and **star**/**watch** the repository for the upcoming layouts and components.
