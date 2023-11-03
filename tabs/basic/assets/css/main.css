@@ -1,0 +1,171 @@
+/* Importing static fonts */
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins Medium";
+    src: url(../fonts/Poppins-Medium.ttf) format("truetype");
+}
+
+/* END */
+
+/* Minimal CSS reset for browser compatibility */
+
+body {
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul[class], ol[class] {
+    list-style: none;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* END */
+
+/* Declaring global custom CSS properties */
+
+:root {
+
+    --main-width: 1280px;
+    --main-side-margin: 1rem;
+    --main-side-padding: 1rem;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6;
+    font-size: .85rem;
+    color: #69699b;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main_container {
+    width: 100%;
+    max-width: var(--main-width);
+    padding: var(--main-side-padding);
+    margin: 0 auto;
+}
+
+/* Tab */
+
+.tab_container {
+    display: flex;
+    position: relative;
+    background-color: white;
+    column-gap: 0.5rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    width: 70%;
+    margin: 0 auto;
+}
+
+.tab_container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    background-color: #EBECF0;
+}
+
+.tab_label {
+    font-family: 'Poppins Medium', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.tab_label:hover {
+    color: #414160;
+    border-bottom: 2px solid #dcdcdc;
+}
+
+.tab_input:checked + .tab_label {
+    color: #414160;
+    border-bottom: 2px solid #98cd04;
+}
+
+.tab_content {
+    position: absolute;
+    background-color: #FFF;
+    padding: 1rem;
+    width: 100%;
+    left: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.tab_container [type="radio"]:checked,
+.tab_container [type="radio"]:not(:checked) {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.tab_input:not(:checked) ~ .tab_content {
+    display: none;
+}
+
+.tab_input:checked ~ .tab_content {
+    display: block;
+}
+
+@media screen and (max-width: 900px) {
+
+    .tab_container {
+        flex-direction: column;
+    }
+
+    .tab_container::before{
+        display: none;
+    }
+
+    .tab_label {
+        justify-content: flex-start;
+        border-bottom: 2px solid #EEEEEE;
+    }
+
+    .tab_content {
+        position: relative;
+        border: none;
+        border-radius: unset;
+        border-bottom: 2px solid #EEEEEE;
+    }
+
+}

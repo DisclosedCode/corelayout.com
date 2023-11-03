@@ -1,0 +1,172 @@
+/* Importing static fonts */
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins Medium";
+    src: url(../fonts/Poppins-Medium.ttf) format("truetype");
+}
+
+/* END */
+
+/* Minimal CSS reset for browser compatibility */
+
+body {
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul[class], ol[class] {
+    list-style: none;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* END */
+
+/* Declaring global custom CSS properties */
+
+:root {
+
+    --main-width: 1280px;
+    --main-side-margin: 1rem;
+    --main-side-padding: 1rem;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6;
+    font-size: .85rem;
+    color: #69699b;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main_container {
+    width: 100%;
+    max-width: var(--main-width);
+    padding: var(--main-side-padding);
+    margin: 0 auto;
+}
+
+/* Tab */
+
+.tab_container {
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.tab {
+    display: block;
+}
+
+.tab_label {
+    font-family: 'Poppins Medium', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    background-color: #EEEEEE;
+    margin-bottom: 8px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 25%;
+}
+
+.tab_label:hover {
+    color: #414160;
+    background-color: #FFFFFF;
+}
+
+.tab_input:checked + .tab_label {
+    color: #414160;
+    background-color: #FFFFFF;
+}
+
+.tab_content {
+    position: absolute;
+    background-color: #FFF;
+    padding: 1rem;
+    width: 75%;
+    min-height: 100%;
+    left: 25%;
+    top: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.tab_container [type="radio"]:checked,
+.tab_container [type="radio"]:not(:checked) {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tab_input:not(:checked) ~ .tab_content {
+    display: none;
+}
+
+.tab_input:checked ~ .tab_content {
+    display: block;
+}
+
+@media screen and (max-width: 900px) {
+
+    .tab_label {
+        width: 100%;
+        background-color: #FFFFFF;
+        border-left: none;
+        border-bottom: 2px solid #EEEEEE;
+        justify-content: flex-start;
+    }
+
+    .tab_label:hover {
+        border-left: none;
+        border-bottom: 2px solid #98cd04;
+    }
+
+    .tab_input:checked + .tab_label {
+        border-left: none;
+        border-bottom: 2px solid #98cd04;
+    }
+
+    .tab_content {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: unset;
+        border-radius: unset;
+        border-bottom: 2px solid #EEEEEE;
+    }
+
+}

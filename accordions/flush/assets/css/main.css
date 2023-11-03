@@ -1,0 +1,199 @@
+/* Importing static fonts */
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins Medium";
+    src: url(../fonts/Poppins-Medium.ttf) format("truetype");
+}
+
+/* END */
+
+/* Minimal CSS reset for browser compatibility */
+
+body {
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul[class], ol[class] {
+    list-style: none;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* END */
+
+/* Declaring global custom CSS properties */
+
+:root {
+
+    --main-width: 1280px;
+    --main-side-margin: 1rem;
+    --main-side-padding: 1rem;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6;
+    font-size: .90rem;
+    color: #69699b;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main_container {
+    width: 100%;
+    max-width: var(--main-width);
+    padding: var(--main-side-padding);
+    margin: 0 auto;
+}
+
+/* Accordion */
+
+.accordions_header {
+    font-family: 'Poppins Medium', sans-serif;
+    font-size: 1.75rem;
+    font-weight: unset;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.accordion {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #69699b;
+}
+
+.accordion_label {
+    font-family: 'Poppins Medium', sans-serif;
+    font-size: 0.90rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 0.8rem;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+}
+
+.accordion_label:hover {
+    background-color: #f8faff;
+}
+
+.accordion:not(:first-child) .accordion_label {
+    border-top: 0;
+}
+
+.accordion:first-child .accordion_label {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.accordion:last-child .accordion_label {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.accordion:last-child .accordion_input:checked + .accordion_label {
+    border-radius: 0;
+}
+
+.accordion_input:checked + .accordion_label {
+    border-bottom: 0;
+    background-color: #f8faff;
+}
+
+.accordion_content {
+    font-size: 0.85rem;
+    background-color: #f8faff;
+    border-style: solid;
+    border-color: rgb(229, 231, 235);
+    border-width: 1px;
+    border-top-width: 0;
+    padding: 0.8rem;
+}
+
+.accordion [type="radio"]:checked,
+.accordion [type="radio"]:not(:checked) {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.accordion_input:not(:checked) ~ .accordion_content {
+    display: none;
+}
+
+.accordion_input:checked ~ .accordion_content {
+    display: flex;
+}
+
+.accordion_label:after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.accordion_input:not(:checked) ~ .accordion_label:after {
+    /* SVG Plus (+) */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%2369699b' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round' ><polyline points='6 9 12 15 18 9'></polyline></svg>");
+
+}
+
+.accordion_input:checked ~ .accordion_label:after {
+    /* SVG Minus (-) */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%2369699b' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round' ><polyline points='18 15 12 9 6 15'></polyline></svg>");
+}
+
+
+/*.accordion_input:checked ~ .accordion_content:before,
+.accordion_input:not(:checked) ~ .accordion_content:before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    cursor: auto;
+    pointer-events: none;
+}
+
+.accordion_input:checked ~ .accordion_content:before {
+    pointer-events: auto;
+}*/

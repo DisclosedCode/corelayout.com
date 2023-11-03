@@ -1,0 +1,121 @@
+/* Importing static fonts */
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins Medium";
+    src: url(../fonts/Poppins-Medium.ttf) format("truetype");
+}
+
+/* END */
+
+/* Minimal CSS reset for browser compatibility */
+
+body {
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul[class], ol[class] {
+    list-style: none;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* END */
+
+/* Declaring global custom CSS properties */
+
+:root {
+
+    --main-width: 1280px;
+    --main-side-margin: 1rem;
+    --main-side-padding: 1rem;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6;
+    font-size: .850rem;
+    color: #69699b;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main_container {
+    width: 100%;
+    max-width: var(--main-width);
+    padding: 0 var(--main-side-padding);
+    margin: 0 auto;
+}
+
+/* Breadcrumbs */
+
+.breadcrumbs_container {
+    font-family: 'Poppins Medium', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    row-gap: 1rem;
+    column-gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.breadcrumb-item {
+    display: inline-flex;
+    column-gap: 0.5rem;
+    align-items: center;
+}
+
+.breadcrumb-item a {
+    display: inline-flex;
+    column-gap: 0.5rem;
+    align-items: center;
+    color: #69699b;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+}
+
+.breadcrumb-active a {
+    pointer-events: none;
+    color: #98cd03;
+}
+
+.breadcrumb-item a:hover {
+    background-color: #eaeaea;
+}
+
+.breadcrumb-item:nth-last-child(n+2):after {
+    display: inline-flex;
+    /* Custom Separator */
+    content: '>';
+    font-size: 1rem;
+    opacity: 0.5;
+}
