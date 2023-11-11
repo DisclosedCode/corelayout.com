@@ -24,7 +24,7 @@ Adopting this approach not only streamlined my development process, but also ens
 - Footers [(footers)](https://github.com/DisclosedCode/corelayout.com/tree/main/footers)
 - Flyout menus [(flyout-menus)](https://github.com/DisclosedCode/corelayout.com/tree/main/flyout-menus)
 - Breadcrumbs [(breadcrumbs)](https://github.com/DisclosedCode/corelayout.com/tree/main/breadcrumbs)
-- Accordions [(accordions)](https://github.com/DisclosedCode/corelayout.com/tree/main/accordions)
+- Collapsibles [(collapsibles)](https://github.com/DisclosedCode/corelayout.com/tree/main/collapsibles)
 - Tabs [(tabs)](https://github.com/DisclosedCode/corelayout.com/tree/main/tabs)
 
 Stay in the loop and **star**/**watch** the repository for the upcoming layouts and components.

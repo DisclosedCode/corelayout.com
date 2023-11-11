@@ -74,9 +74,9 @@ body {
     margin: 0 auto;
 }
 
-/* Accordion */
+/* Collapsible */
 
-.accordion {
+.collapsible {
     display: block;
     width: 80%;
     margin-left: auto;
@@ -85,7 +85,7 @@ body {
     color: #69699b;
 }
 
-.accordion_label {
+.collapsible_label {
     font-family: 'Poppins Medium', sans-serif;
     display: flex;
     justify-content: space-between;
@@ -95,14 +95,13 @@ body {
     border-radius: 5px;
     width: 100%;
     border: 1px solid #e0e0e0;
-    cursor: pointer;
 }
 
-.accordion_label:hover {
+.collapsible_label:hover {
     background-color: #f6f6f6;
 }
 
-.accordion_content {
+.collapsible_content {
     background-color: #FFF;
     border-radius: 4px;
     border-style: solid;
@@ -112,15 +111,32 @@ body {
     padding: 0.8rem;
 }
 
-.accordion[open] .accordion_label {
+.collapsible [type="checkbox"]:checked,
+.collapsible [type="checkbox"]:not(:checked) {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.collapsible_input:not(:checked) ~ .collapsible_content {
+    display: none;
+}
+
+.collapsible_input:checked ~ .collapsible_content {
+    display: flex;
+}
+
+.collapsible_input:checked ~ .collapsible_label {
     border-radius: 5px 5px 0 0;
 }
 
-.accordion[open] .accordion_content {
+.collapsible_input:checked ~ .collapsible_content {
     border-radius: 0 0 5px 5px;
 }
 
-.accordion_label:after {
+.collapsible_label:after {
     flex-shrink: 0;
     width: 1.25rem;
     height: 1.25rem;
@@ -130,13 +146,13 @@ body {
     background-size: contain;
 }
 
-.accordion:not([open]) .accordion_label:after {
+.collapsible_input:not(:checked) ~ .collapsible_label:after {
     /* SVG Plus (+) */
-    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%2369699b' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'><line x1='12' y1='5' x2='12' y2='19'></line><line x1='5' y1='12' x2='19' y2='12'></line></svg>") center no-repeat;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%2369699b' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'><line x1='12' y1='5' x2='12' y2='19'></line><line x1='5' y1='12' x2='19' y2='12'></line></svg>");
 
 }
 
-.accordion[open] .accordion_label:after {
+.collapsible_input:checked ~ .collapsible_label:after {
     /* SVG Minus (-) */
-    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%2369699b' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'><line x1='5' y1='12' x2='19' y2='12'></line></svg>") center no-repeat;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%2369699b' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'><line x1='5' y1='12' x2='19' y2='12'></line></svg>");
 }
