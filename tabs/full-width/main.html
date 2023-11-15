@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Basic</title>
+    <title>Full-width</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="assets/css/main.css" type="text/css" rel="stylesheet"/>
 </head>
@@ -11,43 +11,35 @@
 <div class="main_container">
     <section class="tab_container">
 
-        <label class="tab">
-            <input type="radio" class="tab_input" name="tab_group" checked="checked">
-            <a class="tab_label">
-                Dashboard
-            </a>
-            <div class="tab_content">
-                This serves as a temporary content block for the <b>Dashboard</b> tab's associated information. When you select
-                a different tab, this content will be hidden, and the new tab's content will appear, all achieved
-                through CSS styles without any JavaScript. The CSS rules control the visibility and styling of the
-                content.
-            </div>
-        </label>
-        <label class="tab">
-            <input type="radio" class="tab_input" name="tab_group">
-            <a class="tab_label">
-                Account
-            </a>
-            <div class="tab_content">
-                This serves as a temporary content block for the <b>Account</b> tab's associated information. When you select
-                a different tab, this content will be hidden, and the new tab's content will appear, all achieved
-                through CSS styles without any JavaScript. The CSS rules control the visibility and styling of the
-                content.
-            </div>
-        </label>
-        <label class="tab">
-            <input type="radio" class="tab_input" name="tab_group">
-            <a class="tab_label">
-                Settings
-            </a>
-            <div class="tab_content">
-                This serves as a temporary content block for the <b>Settings</b> tab's associated information. When you select
-                a different tab, this content will be hidden, and the new tab's content will appear, all achieved
-                through CSS styles without any JavaScript. The CSS rules control the visibility and styling of the
-                content.
-            </div>
-        </label>
+        <input type="radio" id="dashboard" class="tab_input" name="tab_group" checked="checked">
+        <label for="dashboard" class="tab_label">Dashboard</label>
+        <div class="tab_content">
+            This serves as a temporary content block for the <b>Dashboard</b> tab's associated information. When you
+            select
+            a different tab, this content will be hidden, and the new tab's content will appear, all achieved
+            through CSS styles without any JavaScript. The CSS rules control the visibility and styling of the
+            content.
+        </div>
 
+        <input type="radio" id="account" class="tab_input" name="tab_group">
+        <label for="account" class="tab_label">Account</label>
+        <div class="tab_content">
+            This serves as a temporary content block for the <b>Account</b> tab's associated information. When you
+            select
+            a different tab, this content will be hidden, and the new tab's content will appear, all achieved
+            through CSS styles without any JavaScript. The CSS rules control the visibility and styling of the
+            content.
+        </div>
+
+        <input type="radio" id="settings" class="tab_input" name="tab_group">
+        <label for="settings" class="tab_label">Settings</label>
+        <div class="tab_content">
+            This serves as a temporary content block for the <b>Settings</b> tab's associated information. When you
+            select
+            a different tab, this content will be hidden, and the new tab's content will appear, all achieved
+            through CSS styles without any JavaScript. The CSS rules control the visibility and styling of the
+            content.
+        </div>
 
     </section>
 </div>

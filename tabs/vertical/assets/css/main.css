@@ -77,51 +77,52 @@ body {
 /* Tab */
 
 .tab_container {
+    display: flex;
+    flex-direction: row;
     position: relative;
     margin: 0 auto;
     width: 70%;
 }
 
-.tab {
-    display: block;
+.tab_navigation {
+    display: flex;
+    flex-direction: column;
+    flex: 25%;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    background-color: #FFFFFF;
 }
 
 .tab_label {
     font-family: 'Poppins Medium', sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
-    z-index: 1;
-    padding: 0.8rem 1rem;
+    padding: 0.6rem 1rem;
     cursor: pointer;
-    background-color: #EEEEEE;
-    margin-bottom: 8px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    width: 25%;
+    border-left: 2px solid transparent;
 }
 
 .tab_label:hover {
     color: #414160;
-    background-color: #FFFFFF;
+    border-left: 2px solid #dcdcdc;
 }
 
-.tab_input:checked + .tab_label {
+#dashboard:checked ~ .tab_navigation .tab_label[for="dashboard"],
+#account:checked ~ .tab_navigation .tab_label[for="account"],
+#settings:checked ~ .tab_navigation .tab_label[for="settings"] {
     color: #414160;
-    background-color: #FFFFFF;
+    border-left: 2px solid #98cd04;
 }
 
 .tab_content {
-    position: absolute;
+    position: relative;
     background-color: #FFF;
     padding: 1rem;
-    width: 75%;
-    min-height: 100%;
-    left: 25%;
-    top: 0;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    flex: 75%;
+    order: 2;
+    margin-left: 5px;
 }
 
 .tab_container [type="radio"]:checked,
@@ -132,41 +133,28 @@ body {
     pointer-events: none;
 }
 
-.tab_input:not(:checked) ~ .tab_content {
+.tab_content section {
     display: none;
 }
 
-.tab_input:checked ~ .tab_content {
+#dashboard:checked ~ .tab_content #dashboard_content,
+#account:checked ~ .tab_content #account_content,
+#settings:checked ~ .tab_content #settings_content {
     display: block;
 }
 
 @media screen and (max-width: 900px) {
 
-    .tab_label {
-        width: 100%;
-        background-color: #FFFFFF;
-        border-left: none;
-        border-bottom: 2px solid #EEEEEE;
-        justify-content: flex-start;
+    .tab_container {
+        flex-direction: column;
     }
 
-    .tab_label:hover {
-        border-left: none;
-        border-bottom: 2px solid #98cd04;
-    }
-
-    .tab_input:checked + .tab_label {
-        border-left: none;
-        border-bottom: 2px solid #98cd04;
+    .tab_navigation {
+        row-gap: 0;
     }
 
     .tab_content {
-        position: relative;
-        width: 100%;
-        left: 0;
-        top: unset;
-        border-radius: unset;
-        border-bottom: 2px solid #EEEEEE;
+        margin-left: 0;
+        margin-top: 5px;
     }
-
 }

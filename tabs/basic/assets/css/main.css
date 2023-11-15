@@ -78,6 +78,7 @@ body {
 
 .tab_container {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     background-color: white;
     column-gap: 0.5rem;
@@ -88,15 +89,6 @@ body {
     margin: 0 auto;
 }
 
-.tab_container::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    background-color: #EBECF0;
-}
-
 .tab_label {
     font-family: 'Poppins Medium', sans-serif;
     display: flex;
@@ -104,6 +96,7 @@ body {
     align-items: center;
     position: relative;
     z-index: 1;
+    order: 1;
     padding: 0.6rem 1rem;
     cursor: pointer;
     border-bottom: 2px solid transparent;
@@ -120,13 +113,14 @@ body {
 }
 
 .tab_content {
-    position: absolute;
     background-color: #FFF;
     padding: 1rem;
     width: 100%;
-    left: 0;
+    order: 2;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    border-top: 2px solid #EBECF0;
+    margin-top: -2px;
 }
 
 .tab_container [type="radio"]:checked,
@@ -137,35 +131,26 @@ body {
     pointer-events: none;
 }
 
-
 .tab_input:not(:checked) ~ .tab_content {
     display: none;
 }
 
-.tab_input:checked ~ .tab_content {
+.tab_input:checked + .tab_label + .tab_content {
     display: block;
 }
 
 @media screen and (max-width: 900px) {
 
-    .tab_container {
-        flex-direction: column;
-    }
-
-    .tab_container::before{
-        display: none;
-    }
-
     .tab_label {
-        justify-content: flex-start;
+        order: unset;
+        width: 100%;
         border-bottom: 2px solid #EEEEEE;
     }
 
     .tab_content {
-        position: relative;
+        order: unset;
         border: none;
         border-radius: unset;
-        border-bottom: 2px solid #EEEEEE;
     }
 
 }

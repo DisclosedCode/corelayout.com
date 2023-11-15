@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Basic</title>
+    <title>Vertical</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="assets/css/main.css" type="text/css" rel="stylesheet"/>
 </head>
@@ -11,52 +11,50 @@
 <div class="main_container">
     <section class="tab_container">
 
-        <label class="tab">
-            <input type="radio" class="tab_input" name="tab_group" checked="checked">
-            <a class="tab_label">
-                Dashboard
-            </a>
-            <div class="tab_content">
-                <h3 style="margin-bottom: 1rem">Dashboard</h3>
-                This serves as a temporary content block for the <b>Dashboard</b> tab's associated information. When you
-                select a different tab, this content will be hidden, and the new tab's content will appear, all achieved
-                through CSS styles without any JavaScript. The CSS rules control the visibility and styling of the
-                content. This serves as a temporary content block for the Dashboard tab's associated information. When you
-                select a different tab, this content will be hidden, and the new tab's content will appear, all achieved
-                through CSS styles without any JavaScript. The CSS rules control the visibility and styling of the
-                content.
-            </div>
-        </label>
-        <label class="tab">
-            <input type="radio" class="tab_input" name="tab_group">
-            <a class="tab_label">
-                Account
-            </a>
-            <div class="tab_content">
-                <h3 style="margin-bottom: 1rem">Account</h3>
-                This serves as a temporary content block for the <b>Account</b> tab's associated information. When
-                you select a different tab, this content will be hidden, and the new tab's content will appear, all achieved
-                through CSS styles without any JavaScript. The CSS rules control the visibility and styling of the
-                content.
-            </div>
-        </label>
-        <label class="tab">
-            <input type="radio" class="tab_input" name="tab_group">
-            <a class="tab_label">
-                Settings
-            </a>
-            <div class="tab_content">
-                <h3 style="margin-bottom: 1rem">Settings</h3>
-                This serves as a temporary content block for the <b>Settings</b> tab's associated information. When you
-                select a different tab, this content will be hidden, and the new tab's content will appear, all achieved
-                through CSS styles without any JavaScript. The CSS rules control the visibility and styling of the
-                content. This serves as a temporary content block for the Settings tab's associated information. When you
-                select a different tab, this content will be hidden, and the new tab's content will appear, all achieved
-                through CSS styles without any JavaScript. The CSS rules control the visibility and styling of the
-                content.
-            </div>
-        </label>
+        <input id="dashboard" type="radio" class="tab_input" name="tab_group" checked="checked">
+        <input id="account" type="radio" class="tab_input" name="tab_group">
+        <input type="radio" id="settings" class="tab_input" name="tab_group">
 
+        <section class="tab_navigation">
+            <label for="dashboard" class="tab_label">Dashboard</label>
+            <label for="account" class="tab_label">Account</label>
+            <label for="settings" class="tab_label">Settings</label>
+        </section>
+
+        <section class="tab_content">
+            <section id="dashboard_content">
+                <h4 style="margin-bottom: 1rem">Dashboard</h4>
+                <p>
+                    This serves as a temporary content block for the <b>Dashboard</b> tab's associated information. When you
+                    select
+                    a different tab, this content will be hidden, and the new tab's content will appear, all achieved
+                    through CSS styles without any JavaScript. The CSS rules control the visibility and styling of the
+                    content.
+                </p>
+            </section>
+            <section id="account_content">
+                <h4 style="margin-bottom: 1rem">Account</h4>
+                <p>
+                    This serves as a temporary content block for the <b>Account</b> tab's associated information. When you
+                    select a different tab, this content will be hidden, and the new tab's content will appear, all achieved
+                    through CSS styles without any JavaScript. The CSS rules control the visibility and styling of the
+                    content.This serves as a temporary content block for the account tab's associated information. When you
+                    select a different tab, this content will be hidden, and the new tab's content will appear, all achieved
+                    through CSS styles without any JavaScript. The CSS rules control the visibility and styling of the
+                    content.
+                </p>
+            </section>
+            <section id="settings_content">
+                <h4 style="margin-bottom: 1rem">Settings</h4>
+                <p>
+                    This serves as a temporary content block for the <b>Settings</b> tab's associated information. When you
+                    select
+                    a different tab, this content will be hidden, and the new tab's content will appear, all achieved
+                    through CSS styles without any JavaScript. The CSS rules control the visibility and styling of the
+                    content.
+                </p>
+            </section>
+        </section>
 
     </section>
 </div>
